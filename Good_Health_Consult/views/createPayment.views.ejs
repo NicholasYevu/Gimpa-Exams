@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs'); %>
+
+    <body class="bodyBg">
+        <%- include('partials/nav.ejs'); %>
+            <div id="loginBG" class="container">
+                <div class="col-12 offset-md-3 col-md-6 offset-md-3 offset-lg-4 col-lg-4 offset-lg-4">
+                    <h2 id="adminLoginText" class="text-center">Good Health Consult</h2>
+                    <p class="text-center">Payment Recorder</p>
+                </div>
+
+                <div class="col-12 offset-md-3 col-md-6 offset-md-3 offset-lg-4 col-lg-4 offset-lg-4">
+                    <form action="/create_payment" method="post">
+                        <div class="form-group">
+                            <label for="uname"><b>Patient Name</b></label>
+                            <input class="form-control" type="text" placeholder="Patient Name" name="patient_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="desc"><b>Amount</b></label>
+                            <input class="form-control" type="text" placeholder="Bill Amount" name="amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="desc"><b>Balance</b></label>
+                            <input class="form-control" type="text" placeholder="Bill Balance" name="balance" required>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-dark btn-block" type="submit">Submit</button>
+                            <label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <%- include('partials/footer.ejs'); %>

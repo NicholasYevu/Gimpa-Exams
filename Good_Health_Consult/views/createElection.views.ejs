@@ -1,0 +1,74 @@
+<%- include('partials/header.ejs'); %>
+
+    <body>
+        <%- include('partials/nav.ejs'); %>
+            <h2 class="text-center">Create Patient Record</h2>
+            <div class="container">
+                <div class="imgContainer col-12 offset-md-3 col-md-6 offset-md-3 offset-lg-4 col-lg-4 offset-lg-4">
+                    <img src="./img/boy.svg" alt="Avatar">
+                </div>
+
+                <div class="col-12 offset-md-3 col-md-6 offset-md-3 offset-lg-4 col-lg-4 offset-lg-4">
+                    <p class="text-center">
+                        Create a new, patient record as the admin <br> of Good Health Consult.
+                    </p>
+                </div>
+
+                <div class="col-12 offset-md-2 col-md-8 offset-md-2 offset-lg-3 col-lg-6 offset-lg-3">
+                    <form action="/create_election" method="POST" enctype="multipart/form-data">
+                        <h2 class="text-center">Patient MetaData</h2>
+                        <hr>
+                        <div class="form-group">
+                            <label for="uname"><b>Patient name</b></label>
+                            <input class="form-control" type="text" placeholder="First name, Last name" name="electionName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="start_time"><b>Date of Birth</b></label>
+                            <input class="form-control" type="date" placeholder="select time" name="electionStartTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="desc"><b>Phone number </b></label>
+                            <input class="form-control" type="text" placeholder="Description of election" name="electionDescription" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="end_time"><b>Residential Address </b></label>
+                            <input class="form-control" type="text" placeholder="select time" name="electionEndTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="end_time"><b>Emergency Contact </b></label>
+                            <input class="form-control" type="text" placeholder="select time" name="emergencyContact" required>
+                        </div>
+
+
+                        <h3 class="text-center">Patient Main Photo</h3>
+                        <hr>
+                        <div class="form-group">
+                            <label for="candidate"><b>Main picture</b></label>
+                            <input class="form-control" type="file" name="electionPoster">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="candidate"><b>Optional picture #1</b></label>
+                            <input class="form-control" type="hidden" placeholder="Candidate Name" name="candidateOne" required>
+                            <input type="file" class="form-control" name="candidateOnePic" required>
+                        </div>
+                        <div class=" form-group">
+                            <label for="candidate"><b>Optional picture #2</b></label>
+                            <input class="form-control" type="hidden" placeholder="Candidate Name" name="candidateTwo" required>
+                            <input type="file" class="form-control" name="candidateTwoPic" required>
+                        </div>
+                        <div class="form-group ">
+                            <label for="candidate "><b>Optional picture #3</b></label>
+                            <input class="form-control" type="hidden" placeholder="Candidate Name" name="candidateThree">
+                            <input type="file" class="form-control" name="candidateThreePic">
+                        </div>
+
+                        <div class="form-group ">
+                            <input class="btn btn-dark btn-block" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <%- include('partials/footer.ejs'); %>

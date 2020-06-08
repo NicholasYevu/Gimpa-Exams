@@ -1,0 +1,37 @@
+<%- include('partials/header.ejs'); %>
+
+    <body>
+        <%- include('partials/nav.ejs'); %>
+
+            <div class="container">
+                <h1>Patient Debt Recorded</h1>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <hr>
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Patient Name</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%for(let i = 0; i < payments.length; i++){%>
+                            <tr>
+                                <td>
+                                    <%= payments[i].patient_name %>
+                                </td>
+                                <td>
+                                    <%=  payments[i].amount %>
+                                </td>
+                                <td>
+                                    <%=  payments[i].balance %>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </div>
+
+            <%- include('partials/footer.ejs'); %>
